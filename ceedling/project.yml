@@ -27,15 +27,6 @@
   :include:
     - inc
     - ../../third-party/rkh/source/portable/test
-    - ../../third-party/rkh/source/fwk/inc
-    - ../tpsens/cbox
-    - ../collector
-    - ../gps
-    - ../BatChr
-    - ../GStatus/inc
-    - ../ffile/source/include
-    - ../ffile
-    - ../
   :support:
     - test/support
 
