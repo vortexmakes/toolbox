@@ -13,18 +13,14 @@ Files related to development tools
 ## Uncrustify
 ### Running the program
 Here are ways to run it:
-```
-#
+```bash
 # simple
-#
 $ uncrustify -c uncrustify.cfg module/*.h -l c
-#
+
 # with backup
-#
 $ uncrustify -c uncrustify.cfg module/*.h -l c --replace
-#
+
 # without backup
-#
 $ uncrustify -c uncrustify.cfg module/*.h -l c --no-backup
 ```
 The `-c` flag selects the configuration file.
@@ -53,7 +49,7 @@ To ease the process a bit:
 
 ## Ceedling
 ### Usage
-```
+```bash
 $ cd module
 $ ceedling ...
 ```
@@ -62,7 +58,7 @@ $ ceedling ...
 
 ## Doxygen
 ### Usage
-```
+```bash
 $ cd docs
 $ doxygen Doxyfile
 ```
