@@ -26,7 +26,6 @@
     - src
   :include:
     - inc
-    - ../../third-party/rkh/source/portable/test
   :support:
     - test/support
 
