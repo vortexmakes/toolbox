@@ -8,9 +8,7 @@ Files related to development tools
 - [Ceedling](#ceedling)
 - [Deploy](#deploy)
 - [Doxygen](#doxygen)
-
 ------------------------------------------------------------------------------
-
 ## Uncrustify
 ### Running the program
 Here are ways to run it:
@@ -47,11 +45,7 @@ To ease the process a bit:
 - [UncrustifyX](https://github.com/ryanmaxwell/UncrustifyX) - Uncrustify
   utility and documentation browser for Mac OS X
 
-------------------------------------------------------------------------------
-
 ## Static code analyzers
-
-------------------------------------------------------------------------------
 
 ## Ceedling
 ### Usage
@@ -60,11 +54,7 @@ $ cd module
 $ ceedling ...
 ```
 
-------------------------------------------------------------------------------
-
 ## Deploy
-
-------------------------------------------------------------------------------
 
 ## Doxygen
 ### Usage
