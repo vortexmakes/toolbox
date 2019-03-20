@@ -8,6 +8,7 @@ Files related to development tools
 - [Ceedling](#ceedling)
 - [Deploy](#deploy)
 - [Doxygen](#doxygen)
+- [Git](#git)
 ------------------------------------------------------------------------------
 ## Uncrustify
 ### Running the program
@@ -62,3 +63,5 @@ $ ceedling ...
 $ cd docs
 $ doxygen Doxyfile
 ```
+
+## Git
