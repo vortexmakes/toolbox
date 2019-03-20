@@ -14,17 +14,20 @@ Files related to development tools
 ### Running the program
 Here are ways to run it:
 ```
-$ uncrustify -c mystyle.cfg -f somefile.c -o somefile.c.unc
-$ uncrustify -c mystyle.cfg -f somefile.c > somefile.c.unc
-$ uncrustify -c mystyle.cfg somefile.c
-$ uncrustify -c mystyle.cfg --no-backup somefile.c
-$ uncrustify -c mystyle.cfg *.c
-$ uncrustify -c mystyle.cfg --no-backup *.c
+#
+# simple
+#
+$ uncrustify -c uncrustify.cfg module/*.h -l c
+#
+# with backup
+#
+$ uncrustify -c uncrustify.cfg module/*.h -l c --replace
+#
+# without backup
+#
+$ uncrustify -c uncrustify.cfg module/*.h -l c --no-backup
 ```
 The `-c` flag selects the configuration file.
-The `-f` flag specifies the input file.
-The `-o` flag specifies the output file.
-If flag `-f` is used without flag `-o` the output will be send to `stdout`.
 
 Alternatively multiple or single files that should be processed can be
 specified at the command end without flags.
