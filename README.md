@@ -5,8 +5,6 @@ Files related to development tools
 
 ## Uncrustify
 - Running the program
-  https://github.com/uncrustify/uncrustify/blob/master/README.md#running-the-program
-
   Here are ways to run it:
   ```
   $ uncrustify -c mystyle.cfg -f somefile.c -o somefile.c.unc
@@ -30,6 +28,7 @@ Files related to development tools
   ```bash
   $ uncrustify -h
   ```
+  Or [Uncrustify official](https://github.com/uncrustify/uncrustify/blob/master/README.md#running-the-program)
 - Some 3rd party tools
   To ease the process a bit:
   - [Universal Indent GUI](http://universalindent.sourceforge.net/) - A
