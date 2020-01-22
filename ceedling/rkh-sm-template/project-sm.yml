@@ -1,0 +1,13 @@
+#
+# Usage:
+#   $ sudo ceedling [clean|clobber] options:project-sm test:Sm
+#
+
+:paths:
+  :test:
+  :source:
+    - src/Sm.c
+  :include:
+    - ../<module>/inc
+    - ../
+  :support:

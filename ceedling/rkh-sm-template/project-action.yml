@@ -1,0 +1,14 @@
+#
+# Usage:
+#   $ sudo ceedling [clean|clobber] options:project-action test:SmAct
+#
+
+:paths:
+  :test:
+  :source:
+    - src/SmAct.c
+  :include:
+    - ../<module>/inc
+    - ../
+  :support:
+

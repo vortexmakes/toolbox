@@ -10,6 +10,8 @@ environment, static code analyzers, beautifiers, among others.
 - [Deploy](#deploy)
 - [Doxygen](#doxygen)
 - [Git](#git)
+- [Vim](#vim)
+- [Docker](#docker)
 ------------------------------------------------------------------------------
 ## Uncrustify
 ### Running the program
@@ -65,3 +67,10 @@ $ doxygen Doxyfile
 ```
 
 ## Git
+
+## Vim
+
+## Docker
+If you want to use a Docker container to develop your code using Ceedling, 
+you can clone [codequality](https://github.com/vortexmakes/codequality.git) repository.
+This [guide](https://github.com/vortexmakes/codequality/blob/master/README.md) explains how to use the container from a terminal.
