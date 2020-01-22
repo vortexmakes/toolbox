@@ -1,21 +1,6 @@
-/*
- *  --------------------------------------------------------------------------
- *
- *                               GICSAFe-Firmware
- *                               ----------------
- *
- *                      Copyright (C) 2019 CONICET-GICSAFe
- *          All rights reserved. Protected by international copyright laws.
- *
- *  Contact information:
- *  site: https://github.com/gicsafe-firmware
- *  e-mail: <someone>@<somewhere>
- *  ---------------------------------------------------------------------------
- */
-
 /**
- *  \file   module.h
- *  \brief  Specifies this module.
+ *  \file   DoWhile.h
+ *  \brief  Specifies DoWhile module.
  */
 
 /* -------------------------- Development history -------------------------- */
@@ -24,13 +9,13 @@
 
 /* -------------------------------- Authors -------------------------------- */
 /*
- *  RiGr  Rick Grimes  rick.grimes@twd.com
+ *  LeFr  Leandro Francucci  lf@vortexmakes.com
  */
 
 /* --------------------------------- Notes --------------------------------- */
 /* --------------------------------- Module -------------------------------- */
-#ifndef __MODULE_H__
-#define __MODULE_H__
+#ifndef __DOWHILE_H__
+#define __DOWHILE_H__
 
 /* ----------------------------- Include files ----------------------------- */
 /* ---------------------- External C language linkage ---------------------- */
@@ -40,9 +25,35 @@ extern "C" {
 
 /* --------------------------------- Macros -------------------------------- */
 /* -------------------------------- Constants ------------------------------ */
+typedef enum Event Event;
+enum Event
+{
+    Start, Alpha, Up, Down
+};
+
+typedef enum State State;
+enum State
+{
+    StateA, StateB, StateC
+};
+
 /* ------------------------------- Data types ------------------------------ */
+typedef struct DoWhile DoWhile;
+struct DoWhile
+{
+    State state;    /* it should be a private attribute */
+    int x;          /* it should be a private attribute */
+    int i;          /* it should be a private attribute */
+    int out;
+};
+
 /* -------------------------- External variables --------------------------- */
+extern DoWhile *doWhile;
+
 /* -------------------------- Function prototypes -------------------------- */
+void DoWhile_init(void);
+State DoWhile_dispatch(Event event);
+
 /* -------------------- External C language linkage end -------------------- */
 #ifdef __cplusplus
 }
