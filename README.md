@@ -51,6 +51,9 @@ To ease the process a bit:
 ## Static code analyzers
 
 ## Ceedling
+The ceedling/template directory contains several templates to create testable 
+modules using Ceedling.
+- mo
 ### Usage
 ```bash
 $ cd module
