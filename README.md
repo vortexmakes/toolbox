@@ -51,14 +51,14 @@ To ease the process a bit:
 ## Static code analyzers
 
 ## Ceedling
-The ceedling/template directory contains several templates to create testable 
-modules using Ceedling.
-- mo
-### Usage
-```bash
-$ cd module
-$ ceedling ...
-```
+The ceedling directory contains several templates to create testable 
+modules using Ceedling. Each template has its own YAML file which indicates 
+how to invoke Ceedling from a shell. 
+The ceedling/template directory includes the templates listed below:
+- [moduleUnderTest](https://github.com/vortexmakes/toolbox/tree/master/ceedling/template/moduleUnderTest): it might be applied to a regular C module
+- [rkh-sm-template](https://github.com/vortexmakes/toolbox/tree/master/ceedling/template/rkh-sm-template): it might be applied to a RKH framework's active object. In this case the active object's state machine has been implemented through Sm.h, SmAct.h, Sm.c and SmAct.c files which are properly located in inc/ and src/ directories.
+- [rkh-sm-unified-template](https://github.com/vortexmakes/toolbox/tree/master/ceedling/template/rkh-sm-unified-template): it might be applied to a RKH framework's active object. In this case the active object's state machine has been implemented through Sm.h and Sm.c files which are located in inc/ and src/ directories respectively.
+- [sm-template](https://github.com/vortexmakes/toolbox/tree/master/ceedling/template/sm-template): it might be applied to a state machine module
 
 ## Deploy
 
