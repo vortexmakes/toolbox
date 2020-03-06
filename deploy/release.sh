@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 
-token="" #leanfrancucci's token= a316698e1755f7662e31147a64f17b3a4c7687b1
+token=""
 github="https://api.github.com"
 branch="master"
 changelog=""
