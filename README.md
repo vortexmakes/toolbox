@@ -1,13 +1,13 @@
 # Toolbox
 A set of software tools about source code quality such as testing 
-environment, static code analyzers, beautifiers, among others.
+environment, static code analyzers, code beautifiers, among others.
 
 ## Contents
 
 - [Uncrustify](#uncrustify)
 - [Static Code Analyzers](#static-code-analyzers)
 - [Ceedling](#ceedling)
-- [Deploy](#deploy)
+- [Deploy and release](#deploy)
 - [Doxygen](#doxygen)
 - [Git](#git)
 - [Vim](#vim)
@@ -51,16 +51,19 @@ To ease the process a bit:
 ## Static code analyzers
 
 ## Ceedling
+### Usage
+Documentation and license info exists in the [Ceedling's repository](https://github.com/ThrowTheSwitch/Ceedling/blob/master/docs/CeedlingPacket.md)
+### Testeable module templates
 The ceedling directory contains several templates to create testable 
-modules using Ceedling. Each template has its own YAML file which indicates 
+modules using [Ceedling](https://github.com/ThrowTheSwitch/Ceedling.git). Each template has its own YAML file which indicates 
 how to invoke Ceedling from a shell. 
-The ceedling/template directory includes the templates listed below:
+The [ceedling/template](https://github.com/vortexmakes/toolbox/tree/master/ceedling/template) directory includes the templates listed below:
 - [moduleUnderTest](https://github.com/vortexmakes/toolbox/tree/master/ceedling/template/moduleUnderTest): it might be applied to a regular C module
 - [rkh-sm-template](https://github.com/vortexmakes/toolbox/tree/master/ceedling/template/rkh-sm-template): it might be applied to a RKH framework's active object. In this case the active object's state machine has been implemented through Sm.h, SmAct.h, Sm.c and SmAct.c files which are properly located in inc/ and src/ directories.
 - [rkh-sm-unified-template](https://github.com/vortexmakes/toolbox/tree/master/ceedling/template/rkh-sm-unified-template): it might be applied to a RKH framework's active object. In this case the active object's state machine has been implemented through Sm.h and Sm.c files which are located in inc/ and src/ directories respectively.
 - [sm-template](https://github.com/vortexmakes/toolbox/tree/master/ceedling/template/sm-template): it might be applied to a state machine module
 
-## Deploy
+## Deploy and release
 
 ## Doxygen
 ### Usage
@@ -70,10 +73,10 @@ $ doxygen Doxyfile
 ```
 
 ## Git
-
+.gitignore, .gitkeep
 ## Vim
-
+A [Vim](https://www.vim.org/) configuration file (.vimrc) for developing C/C++ code is available in [vim/](https://github.com/vortexmakes/toolbox/tree/master/vim) directory.
 ## Docker
-If you want to use a Docker container to develop your code using Ceedling, 
+If you want to use a Docker container to develop your own code using [Ceedling](https://github.com/ThrowTheSwitch/Ceedling.git), 
 you can clone [codequality](https://github.com/vortexmakes/codequality.git) repository.
-This [guide](https://github.com/vortexmakes/codequality/blob/master/README.md) explains how to use the container from a terminal.
+This [guide](https://github.com/vortexmakes/codequality/blob/master/README.md) explains how to use this container from shell.
