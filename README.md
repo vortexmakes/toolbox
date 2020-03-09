@@ -53,6 +53,7 @@ To ease the process a bit:
 ## Ceedling
 ### Usage
 Documentation and license info exists in the [Ceedling's repository](https://github.com/ThrowTheSwitch/Ceedling/blob/master/docs/CeedlingPacket.md)
+
 ### Testeable module templates
 The ceedling directory contains several templates to create testable 
 modules using [Ceedling](https://github.com/ThrowTheSwitch/Ceedling.git). Each template has its own YAML file which indicates 
@@ -67,7 +68,10 @@ The [ceedling/template](https://github.com/vortexmakes/toolbox/tree/master/ceedl
 
 ## Doxygen
 A [Doxygen](https://github.com/doxygen/doxygen) configuration file ([Doxyfile](https://github.com/vortexmakes/toolbox/blob/master/doxygen/Doxyfile)) for developing C/C++ code is available in [doxygen/](https://github.com/vortexmakes/toolbox/tree/master/doxygen) directory.
-
+#### Usage
+```bash
+$ doxygen Doxygen # Execute it from a directory to generate source code documentation
+```
 
 ## Git
 The file [git-cheapsheet.md](https://github.com/vortexmakes/toolbox/blob/master/git/git-cheatsheet.md) provides a simple Git cheap sheet. This file is located in [git/](https://github.com/vortexmakes/toolbox/tree/master/git) directory. Aditionally, this directory contains a couple of useful files to using Git in a C/C++ project such as .gitignore
