@@ -7,7 +7,7 @@ environment, static code analyzers, code beautifiers, among others.
 - [Uncrustify](#uncrustify)
 - [Static Code Analyzers](#static-code-analyzers)
 - [Ceedling](#ceedling)
-- [Deploy and release](#deploy)
+- [Deploy and release](#deploy-and-release)
 - [Doxygen](#doxygen)
 - [Git](#git)
 - [Vim](#vim)
@@ -66,16 +66,15 @@ The [ceedling/template](https://github.com/vortexmakes/toolbox/tree/master/ceedl
 ## Deploy and release
 
 ## Doxygen
-### Usage
-```bash
-$ cd docs
-$ doxygen Doxyfile
-```
+A [Doxygen](https://github.com/doxygen/doxygen) configuration file ([Doxygen](https://github.com/vortexmakes/toolbox/blob/master/doxygen/Doxygen)) for developing C/C++ code is available in [doxygen/](https://github.com/vortexmakes/toolbox/tree/master/doxygen) directory.
+
 
 ## Git
-.gitignore, .gitkeep
+The file [git-cheapsheet.md](https://github.com/vortexmakes/toolbox/blob/master/git/git-cheatsheet.md) provides a simple Git cheap sheet. This file is located in [git/](https://github.com/vortexmakes/toolbox/tree/master/git) directory. Aditionally, this directory contains a couple of useful files to using Git in a C/C++ project such as .gitignore
+
 ## Vim
-A [Vim](https://www.vim.org/) configuration file (.vimrc) for developing C/C++ code is available in [vim/](https://github.com/vortexmakes/toolbox/tree/master/vim) directory.
+A [Vim](https://www.vim.org/) configuration file ([.vimrc](https://github.com/vortexmakes/toolbox/blob/master/vim/.vimrc)) for developing C/C++ code is available in [vim/](https://github.com/vortexmakes/toolbox/tree/master/vim) directory.
+
 ## Docker
 If you want to use a Docker container to develop your own code using [Ceedling](https://github.com/ThrowTheSwitch/Ceedling.git), 
 you can clone [codequality](https://github.com/vortexmakes/codequality.git) repository.
