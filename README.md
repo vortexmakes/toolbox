@@ -74,7 +74,7 @@ $ doxygen Doxygen # Execute it from a directory in which you will generate sourc
 ```
 
 ## Git
-The file [git-cheapsheet.md](https://github.com/vortexmakes/toolbox/blob/master/git/git-cheatsheet.md) provides a simple Git cheap sheet. This file is located in [git/](https://github.com/vortexmakes/toolbox/tree/master/git) directory. Aditionally, this directory contains a couple of useful files to using Git in a C/C++ project such as [.gitignore](https://github.com/vortexmakes/toolbox/blob/master/git/.gitignore)
+The file [git-cheapsheet.md](https://github.com/vortexmakes/toolbox/blob/master/git/git-cheatsheet.md) provides a simple Git cheap sheet. This file is located in [git/](https://github.com/vortexmakes/toolbox/tree/master/git) directory. Aditionally, this directory contains a couple of useful files for using Git in a C/C++ project such as [.gitignore](https://github.com/vortexmakes/toolbox/blob/master/git/.gitignore)
 
 ## Vim
 A [Vim](https://www.vim.org/) configuration file ([.vimrc](https://github.com/vortexmakes/toolbox/blob/master/vim/.vimrc)) for developing C/C++ code is available in [vim/](https://github.com/vortexmakes/toolbox/tree/master/vim) directory.
