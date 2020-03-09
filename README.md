@@ -70,7 +70,7 @@ The [ceedling/template](https://github.com/vortexmakes/toolbox/tree/master/ceedl
 A [Doxygen](https://github.com/doxygen/doxygen) configuration file ([Doxyfile](https://github.com/vortexmakes/toolbox/blob/master/doxygen/Doxyfile)) for developing C/C++ code is available in [doxygen/](https://github.com/vortexmakes/toolbox/tree/master/doxygen) directory.
 #### Usage
 ```bash
-$ doxygen Doxygen # Execute it from a directory to generate source code documentation
+$ doxygen Doxygen # Execute it from a directory in which you will generate source code documentation
 ```
 
 ## Git
