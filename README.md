@@ -66,7 +66,7 @@ The [ceedling/template](https://github.com/vortexmakes/toolbox/tree/master/ceedl
 ## Deploy and release
 
 ## Doxygen
-A [Doxygen](https://github.com/doxygen/doxygen) configuration file ([Doxygen](https://github.com/vortexmakes/toolbox/blob/master/doxygen/Doxygen)) for developing C/C++ code is available in [doxygen/](https://github.com/vortexmakes/toolbox/tree/master/doxygen) directory.
+A [Doxygen](https://github.com/doxygen/doxygen) configuration file ([Doxyfile](https://github.com/vortexmakes/toolbox/blob/master/doxygen/Doxyfile)) for developing C/C++ code is available in [doxygen/](https://github.com/vortexmakes/toolbox/tree/master/doxygen) directory.
 
 
 ## Git
