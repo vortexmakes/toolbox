@@ -52,9 +52,9 @@ To ease the process a bit:
 
 ## Ceedling
 ### Usage
-Documentation and license info exists in the [Ceedling's repository](https://github.com/ThrowTheSwitch/Ceedling/blob/master/docs/CeedlingPacket.md)
+Documentation and license info exists in the [Ceedling's repository](https://github.com/ThrowTheSwitch/Ceedling/blob/master/docs/CeedlingPacket.md). You can use Ceedling from [this](https://github.com/vortexmakes/embedded-code-quality) Docker container.
 
-### Testeable module templates
+### Testable module templates
 The ceedling directory contains several templates to create testable 
 modules using [Ceedling](https://github.com/ThrowTheSwitch/Ceedling.git). Each template has its own YAML file which indicates 
 how to invoke Ceedling from a shell. 
