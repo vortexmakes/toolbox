@@ -1,6 +1,6 @@
 # Toolbox
-A set of software tools about source code quality such as testing 
-environment, static code analyzers, code beautifiers, among others.
+A set of software tools and tech notes about embedded source code quality such as testing 
+environments, static code analyzers, code beautifiers, among others.
 
 ## Contents
 
