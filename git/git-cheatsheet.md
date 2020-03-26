@@ -1,5 +1,50 @@
 # Git Memo (yet another cheat sheet)
+## Contents
 
+- [References and tools](#references-and-tools)
+	- [Learning Git](#learning-git)
+	- [Visual cheat sheet](#visual-cheat-sheet)
+	- [Book](#book)
+- [Setup](#setup)
+	- [File ending](#file-ending)
+	- [Using Vim](#using-vim)
+	- [How to remove crtl-M](#how-to-remove-ctrl-m)
+- [Colors in GIT](#colors-in-git)
+- [Exclude](#exclude)
+- [Add](#add)
+- [Help](#help)
+- [Revert](#revert)
+	- [Commit](#commit)
+		- [Add file to last commit](#add-file-to-last-commit)
+	- [File](#file)
+		- [Changing file to old commit](#changing-file-to-old-commit)
+		- [Recovery deleted file](#recovery-deleted-file)
+- [Diff](#diff)
+- [Remove files](#remove-files)
+- [Moving files](#moving-files)
+- [History](#history)
+- [Init](#init)
+- [Cloning](#cloning)
+- [Branches](#branches)
+	- [Listing](#listing)
+	- [Remote branches](#remote-branches)
+- [Tag](#tag)
+- [List files](#list-files)
+- [Alias](#alias)
+- [Pull & Push](#pull--push)
+- [Merge](#merge)
+- [Stash](#stash)
+- [Submodule](#submodule)
+	- [Update submodule](#update-submodule)
+	- [Tie to specific branch](#tie-to-specific-branch)
+	- [Tie to specific tag](#tie-to-specific-tag)
+- [Archive](#archive)
+- [Migrating svn to git](#migrating-svn-to-git)
+- [Support for Subversion clients](#support-for-subversion-clients)
+- [Duplicating a repository](#duplicating-a-repository)
+- [Git LFS](#git-lfs)
+
+------------------------------------------------------------------------------
 ## References and tools
 ### Learning Git
 https://learngitbranching.js.org/
@@ -30,7 +75,7 @@ http://stackoverflow.com/questions/1967370/git-replacing-lf-with-crlf/20653073#2
 ### Using Vim
 http://vim.wikia.com/wiki/File_format
 
-### How to remove ^M
+### How to remove ctrl-M
 Find no utf-8 characters
 ```bash 
 grep -P "[\x80-\xFF]" <file>
@@ -107,7 +152,7 @@ https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified
 *reset: moves the branch that HEAD points to*
 *checkout: moves the HEAD to point to other branch*
 
-### Diff
+## Diff
 ```bash
 $ git diff # Changes in the working tree not yet staged 
            # for the next commit
@@ -127,19 +172,19 @@ $ git diff HEAD^^ HEAD main.c
 $ git diff HEAD~2 HEAD main.c
 ```
 
-### Remove files
+## Remove files
 ```bash
 $ git rm --cached <file> # remove from stage  area
 $ git rm -f <file> # remove from working directory and stages area
 $ rm <file> # remove untracked file
 ```
 
-### Moving files
+## Moving files
 ```bash
 $ git mv <old_file> <new_file> # rename <old_file>
 ```
 
-### History
+## History
 ```bash
 $ git log
 $ git log -p -2 # with diff and the last 2 commits
@@ -156,7 +201,7 @@ $ git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(
 
 https://git-scm.com/book/es/v1/Fundamentos-de-Git-Viendo-el-hist%C3%B3rico-de-confirmaciones
 
-### Init
+## Init
 ```bash
 # Create an empty Git repository or reinitialize an existing one
 cd path
@@ -167,7 +212,7 @@ git commit
 git push -u origin master
 ```
 
-### Cloning
+## Cloning
 ```bash
 # Clones a repository into a newly created directory, 
 # creates remote-tracking branches for each branch in the 
@@ -178,14 +223,14 @@ git push -u origin master
 $ git clone <remote> [-b <branch>] [<directory>]
 ```
 
-### Branches
+## Branches
 ```bash
 $ git checkout <branch> # switch to <branch>
 $ git checkout -b '<branch>' # creates <branch> and switch to it
 $ git branch -d <branch> # delete <branch>
 ```
 
-#### Listing
+### Listing
 ```bash
 $ git remote [-v] # shows remote repositories [with url]
 $ git branch # existing branches are listed
@@ -195,7 +240,7 @@ $ git branch -v # list branches and its pointers (commit)
 $ git branch --merged # list merged branches
 ```
 
-#### Remote branches
+### Remote branches
 ```bash
 # Create the branch <remote_branch> in the <remote> by copying the 
 # current <local_branch> and track it by adding the up-stream reference
@@ -233,7 +278,7 @@ $ git branch -avv # verify branches
 $ git checkout -b <local_branch> <remote>/<remote_branch>
 ```
 
-### Tag
+## Tag
 ```bash
 $ git tag # show
 $ git tag -a v1.2 -m 'version 1.2' 9fceb02  # creating for a commit
@@ -242,12 +287,12 @@ $ git push origin <tagname> # sharing
 $ git push origin --tags # sharing all
 ```
 
-### List files
+## List files
 ```bash
 $ git ls-files
 ```
 
-### Alias
+## Alias
 ```bash
 # in ~/.gitconfig
 [alias]
@@ -256,7 +301,7 @@ lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(
 lg = !"git lg1"
 ```
 
-### Pull & Push
+## Pull & Push
 ```bash
 # Fetch from and integrate with another repository into the 
 # current branch
@@ -282,7 +327,7 @@ git diff [remote repo/branch file_path]
 git diff --numstat [remote repo/branch]
 ```
 
-### Merge
+## Merge
 ```bash
 $ git config merge.tool vimdiff # get it before set it
 $ git config merge.conflictstyle diff3 # get it before set it
@@ -296,7 +341,7 @@ $ git merge --no-ff <branch> # causes the merge to always create a
 ```
 https://gist.github.com/karenyyng/f19ff75c60f18b4b8149
 
-### Stash
+## Stash
 ```bash
 # stashing code with git stash
 # ... hack hack hack ...
@@ -317,7 +362,7 @@ $ git reset --soft HEAD^
 # ... continue hacking ...
 ```
 
-### Submodule
+## Submodule
 ```bash
 $ cd third-party
 $ git submodule add https://github.com/ThrowTheSwitch/Ceedling.git ceedling # ignored for clone process
@@ -333,29 +378,29 @@ $ cd third-party
 $ git submodule update --remote third-party/rkh
 ```
 
-#### Update submodule
+### Update submodule
 ```bash
 $ git config -f .gitmodules submodule.<submodule>.branch <branch or commit>
 $ git submodule update --remote <submodule_path>
 ```
 
-#### Tie to specific branch
+### Tie to specific branch
 ```bash
 git config -f .gitmodules submodule.<submodule>.branch <branch>
 ```
 
-#### Tie to specific tag
+### Tie to specific tag
 ```bash
 git config -f .gitmodules submodule.<submodule>.tag <tag>
 ```
 
-### Archive
+## Archive
 ```bash
 # Create an archive of files from a named tree
 $ git archive --worktree-attributes -o <file>.zip origin/master # or master
 ```
 
-### Migrating svn to git
+## Migrating svn to git
 ```bash
 # Extracting authors from svn
 mkdir ~/dynalogin-conversion
@@ -410,10 +455,10 @@ https://danielpocock.com/migrating-a-sourceforge-project-from-subversion-to-git
 $ git push --all
 ```
 
-### Support for Subversion clients
+## Support for Subversion clients
 From GitHub: https://help.github.com/en/articles/support-for-subversion-clients 
 
-### Duplicating a repository
+## Duplicating a repository
 ```bash
 # If you want to mirror a repository in another location, including getting updates from the original, you can clone a mirror and periodically push the changes
 
@@ -429,7 +474,7 @@ git fetch -p origin
 git push --mirror
 ```
 
-### Git LFS
+## Git LFS
 https://git-lfs.github.com/
 https://help.github.com/en/articles/resolving-git-large-file-storage-upload-failures
 https://medium.com/@AyunasCode/how-to-push-large-files-to-github-253d05cc6a09#.kfvv2fu5z
