@@ -1,4 +1,4 @@
-# Git Memo (yet another cheat sheet)
+# Git user guide (yet another cheat sheet)
 ## Contents
 
 - [References and tools](#references-and-tools)
