@@ -128,7 +128,11 @@ Use this command if you want to revert a commit which has already published.
 ```bash
 $ git revert <desired-commit> # revert desired commit
 ```
-If you want to revert a merge commit, you have to specify which parent of the merge you want to consider to be the main-line, i.e. what you want to revert to. You can identify the commit parent number by using this command:
+If you want to revert a merge commit, you have to specify which parent of the merge you want to consider to be the main-line, i.e. what you want to revert to. 
+```bash 
+$ git revert -m <parent-number> <desired-commit>
+```
+You can identify the commit parent number by using this command:
 ```bash 
 $ git cat-file -p <desired-commit>
 ```
