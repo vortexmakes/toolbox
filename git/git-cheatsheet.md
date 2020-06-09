@@ -14,8 +14,9 @@
 - [Add](#add)
 - [Help](#help)
 - [Revert](#revert)
-	- [Commit](#commit)
-		- [Add file to last commit](#add-file-to-last-commit)
+	- [A commit using reset](#a-commit-using-reset)
+	- [A commit using revert](#a-commit-using-revert)
+	- [Add file to last commit](#add-file-to-last-commit)
 	- [File](#file)
 		- [Changing file to old commit](#changing-file-to-old-commit)
 		- [Recovery deleted file](#recovery-deleted-file)
@@ -117,18 +118,20 @@ $ git <command> --help
 $ man git-<command>
 ```
 ## Revert
-### Commit using reset command
+### A commit using reset
 ```bash
 $ git commit --amend # modify last commit with the current index changes
 $ git reset --soft HEAD^ # undo last commit, without changing working dir or stage
 ```
-### Commit using revert command
-Use revert command when you want to revert a commit and you have already published it
+### A commit using revert
+Use this command if you want to revert a commit which has already published.
 ```bash
 $ git revert <desired-commit> # revert desired commit
 ```
-If you want to revert a merge commit, you have to specify which parent of the merge you want to consider to be the main-line, i.e. what you want to revert to. You can identify the commit parent number by using this command 
-```bash $ git cat-file -p <desired-commit>```
+If you want to revert a merge commit, you have to specify which parent of the merge you want to consider to be the main-line, i.e. what you want to revert to. You can identify the commit parent number by using this command:
+```bash 
+$ git cat-file -p <desired-commit>
+```
 It will show you the parent commits in order. The first one listed would be -m 1, the second -m 2, and so on.
 ### Add file to last commit
 ```bash
