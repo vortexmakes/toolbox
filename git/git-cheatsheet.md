@@ -14,8 +14,8 @@
 - [Add](#add)
 - [Help](#help)
 - [Revert](#revert)
-	- [A commit using reset](#a-commit-using-reset)
-	- [A commit using revert](#a-commit-using-revert)
+	- [A commit using reset](#a-commit-using-reset-command)
+	- [A commit using revert](#a-commit-using-revert-command)
 	- [Add file to last commit](#add-file-to-last-commit)
 	- [File](#file)
 		- [Changing file to old commit](#changing-file-to-old-commit)
@@ -118,12 +118,12 @@ $ git <command> --help
 $ man git-<command>
 ```
 ## Revert
-### A commit using reset
+### A commit using reset command
 ```bash
 $ git commit --amend # modify last commit with the current index changes
 $ git reset --soft HEAD^ # undo last commit, without changing working dir or stage
 ```
-### A commit using revert
+### A commit using revert command
 Use this command if you want to revert a commit which has already published.
 ```bash
 $ git revert <desired-commit> # revert desired commit
