@@ -117,12 +117,20 @@ $ git <command> --help
 $ man git-<command>
 ```
 ## Revert
-### Commit
+### Commit using reset command
 ```bash
 $ git commit --amend # modify last commit with the current index changes
 $ git reset --soft HEAD^ # undo last commit, without changing working dir or stage
 ```
-#### Add file to last commit
+### Commit using revert command
+Use revert command when you want to revert a commit and you have already published it
+```bash
+$ git revert <desired-commit> # revert desired commit
+```
+If you want to revert a merge commit, you have to specify which parent of the merge you want to consider to be the main-line, i.e. what you want to revert to. You can identify the commit parent number by using this command 
+```bash $ git cat-file -p <desired-commit>```
+It will show you the parent commits in order. The first one listed would be -m 1, the second -m 2, and so on.
+### Add file to last commit
 ```bash
 $ git add the_left_out_file
 $ git commit --amend --no-edit
