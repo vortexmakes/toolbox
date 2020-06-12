@@ -181,6 +181,11 @@ $ git diff-index --cached HEAD
 
 # Compare the version before the last commit and the last commit
 $ git diff HEAD^ HEAD
+$ git diff HEAD HEAD~1
+
+# Chanched files between commits
+$ git diff --name-status HEAD HEAD~1
+$ git diff --name-status <commitA-sha-1> <commitB-sha-1>
 
 # Difference for a file "main.c" between now and two commits back
 $ git diff HEAD^^ HEAD main.c
