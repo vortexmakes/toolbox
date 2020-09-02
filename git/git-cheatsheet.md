@@ -26,6 +26,7 @@
 - [History](#history)
 - [Init](#init)
 - [Cloning](#cloning)
+- [Connecting to GitHub with SSH](###connecting-to-github-with-ssh)
 - [Branches](#branches)
 	- [Listing](#listing)
 	- [Remote branches](#remote-branches)
@@ -241,6 +242,28 @@ git push -u origin master
 # from the cloned 
 # repository's currently active branch. */
 $ git clone <remote> [-b <branch>] [<directory>]
+```
+## Connecting to GitHub with SSH
+- [Checking for existing SSH keys](https://docs.github.com/en/github/authenticating-to-github/checking-for-existing-ssh-keys). 
+Before you generate an SSH key, you can check to see if you have any existing SSH keys.
+- [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent). 
+After you've checked for existing SSH keys, you can generate a new SSH key to use for 
+authentication, then add it to the ssh-agent.
+- [Adding a new SSH key to your GitHub account](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account). 
+To configure your GitHub account to use your new (or existing) SSH key, you'll also 
+need to add it to your GitHub account.
+- [Testing your SSH connection](https://docs.github.com/en/github/authenticating-to-github/testing-your-ssh-connection). 
+After you've set up your SSH key and added it to your GitHub account, you can test your 
+connection.
+- [Switching remote URLs from HTTPS to SSH](https://docs.github.com/en/github/using-git/changing-a-remotes-url#switching-remote-urls-from-https-to-ssh)
+```bash
+$ git remote -v
+> origin  https://github.com/ORGANIZATION/REPOSITORY.git (fetch)
+> origin  https://github.com/ORGANIZATION/REPOSITORY.git (push)
+$ git remote set-url origin git@github.com:ORGANIZATION/REPOSITORY.git # Use USERNAME instead of ORGANIZATION if neccesary
+$ git remote -v
+> origin  git@github.com:ORGANIZATION/REPOSITORY.git (fetch)
+> origin  git@github.com:ORGANIZATION/REPOSITORY.git (push)
 ```
 
 ## Branches
