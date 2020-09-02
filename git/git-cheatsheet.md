@@ -26,7 +26,7 @@
 - [History](#history)
 - [Init](#init)
 - [Cloning](#cloning)
-- [Connecting to GitHub with SSH](###connecting-to-github-with-ssh)
+- [Connecting to GitHub with SSH](#connecting-to-github-with-ssh)
 - [Branches](#branches)
 	- [Listing](#listing)
 	- [Remote branches](#remote-branches)
