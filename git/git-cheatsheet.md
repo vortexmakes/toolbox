@@ -31,6 +31,7 @@
 	- [Listing](#listing)
 	- [Remote branches](#remote-branches)
 - [Tag](#tag)
+	- [Switching to a tag](#switch-to-a-tag)
 - [List files](#list-files)
 - [Alias](#alias)
 - [Pull & Push](#pull--push)
@@ -328,6 +329,19 @@ $ git tag -a v1.2 -m 'version 1.2' 9fceb02  # creating for a commit
 $ git tag -a v1.0 -m 'version 1.0' # creating for HEAD
 $ git push origin <tagname> # sharing
 $ git push origin --tags # sharing all
+```
+### Switch to a tag
+```bash
+$ git checkout tags/v1.1.22 # switch to tag v1.1.22
+```
+If you want to create a new branch to retain commits you create, 
+you may do so (now or later) by using -c with the switch command.
+```bash
+$ git switch -c <new-branch-name>
+```
+Or undo this operation with:
+```bash
+$ git switch -
 ```
 
 ## List files
