@@ -321,6 +321,8 @@ $ git clone <remote> -b <remote_branch> <directory>
 $ git branch -avv # verify branches
 $ git checkout -b <local_branch> <remote>/<remote_branch>
 ```
+### Git branching model
+https://nvie.com/posts/a-successful-git-branching-model/
 
 ## Tag
 ```bash
