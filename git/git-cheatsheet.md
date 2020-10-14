@@ -30,6 +30,7 @@
 - [Branches](#branches)
 	- [Listing](#listing)
 	- [Remote branches](#remote-branches)
+	- [Branching model](#branching-model)
 - [Tag](#tag)
 	- [Switching to a tag](#switch-to-a-tag)
 - [List files](#list-files)
@@ -321,7 +322,7 @@ $ git clone <remote> -b <remote_branch> <directory>
 $ git branch -avv # verify branches
 $ git checkout -b <local_branch> <remote>/<remote_branch>
 ```
-### Git branching model
+### Branching model
 https://nvie.com/posts/a-successful-git-branching-model/
 
 ## Tag
