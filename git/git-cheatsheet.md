@@ -121,6 +121,11 @@ $ git <command> --help
 $ man git-<command>
 ```
 ## Revert
+### The most recent commit message (not pushed)
+```bash
+git commit --amend -m "New commit message"
+```
+
 ### A commit using reset command
 ```bash
 $ git commit --amend # modify last commit with the current index changes
