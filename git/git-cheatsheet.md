@@ -48,7 +48,8 @@
 - [Support for Subversion clients](#support-for-subversion-clients)
 - [Duplicating a repository](#duplicating-a-repository)
 - [Git LFS](#git-lfs)
-- [Misc](#get-a-file-from-another-branch-or-commit)
+- [Misc](#misc)
+	- [Get a file from another branch or commit](#get-a-file-from-another-branch-or-commit)
 
 ------------------------------------------------------------------------------
 ## References and tools
