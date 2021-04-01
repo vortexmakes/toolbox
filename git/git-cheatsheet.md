@@ -37,6 +37,7 @@
 - [Alias](#alias)
 - [Pull & Push](#pull--push)
 - [Merge](#merge)
+	- [Preserving file while merging](#preserving-file-while-merging)
 - [Stash](#stash)
 - [Submodule](#submodule)
 	- [Update submodule](#update-submodule)
@@ -47,6 +48,7 @@
 - [Support for Subversion clients](#support-for-subversion-clients)
 - [Duplicating a repository](#duplicating-a-repository)
 - [Git LFS](#git-lfs)
+- [Misc](#get-a-file-from-another-branch-or-commit)
 
 ------------------------------------------------------------------------------
 ## References and tools
@@ -404,6 +406,9 @@ $ git merge --abort
 $ git merge --no-ff <branch> # causes the merge to always create a 
                             # new commit object
 ```
+### Preserving file while merging
+See https://medium.com/@porteneuve/how-to-make-git-preserve-specific-files-while-merging-18c92343826b
+
 https://gist.github.com/karenyyng/f19ff75c60f18b4b8149
 
 ## Stash
@@ -545,3 +550,9 @@ https://help.github.com/en/articles/resolving-git-large-file-storage-upload-fail
 https://medium.com/@AyunasCode/how-to-push-large-files-to-github-253d05cc6a09#.kfvv2fu5z
 https://stackoverflow.com/questions/33360043/git-error-need-to-remove-large-file
 https://help.github.com/en/articles/removing-sensitive-data-from-a-repository
+
+## Misc
+### Get a file from another branch or commit
+```bash
+git show <commit-sha1>:<path/to/file/file> > <copied-file>
+```
