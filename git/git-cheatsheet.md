@@ -38,6 +38,7 @@
 - [Pull & Push](#pull--push)
 - [Merge](#merge)
 	- [Preserving file while merging](#preserving-file-while-merging)
+	- [Inspecting before creating a merge commit](#inspecting-before-creating-a-merge-commit)
 - [Stash](#stash)
 - [Submodule](#submodule)
 	- [Update submodule](#update-submodule)
@@ -411,6 +412,20 @@ $ git merge --no-ff <branch> # causes the merge to always create a
 See https://medium.com/@porteneuve/how-to-make-git-preserve-specific-files-while-merging-18c92343826b
 
 https://gist.github.com/karenyyng/f19ff75c60f18b4b8149
+
+### Inspecting before creating a merge commit
+With --no-commit perform the merge and stop just before creating a merge commit,
+to give the user a chance to inspect and further tweak the merge result before
+committing.
+
+Note that fast-forward updates do not create a merge commit and therefore there
+is no way to stop those merges with --no-commit. Thus, if you want to ensure
+your branch is not changed or updated by the merge command, use --no-ff with
+--no-commit.
+
+```bash
+$ git merge --no-commit --no-ff <branch>
+```
 
 ## Stash
 ```bash
