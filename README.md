@@ -49,6 +49,27 @@ To ease the process a bit:
   utility and documentation browser for Mac OS X
 
 ## Static code analyzers
+## [Cppcheck](http://cppcheck.sourceforge.net/)
+## [Uno](https://github.com/nimble-code/Uno)
+## [Infer](https://fbinfer.com/)
+See this [guide](https://fbinfer.com/docs/getting-started) to get started with Infer.
+To run Infer, type the following in your terminal from the same directory as hello.c:
+```bash
+infer run -- gcc -c hello.c
+```
+To run Infer with a build system like CMake:
+```bash
+cd build
+cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..
+cd ..
+infer run --compilation-database build/compile_commands.json
+```
+Alternatively, one can trick CMake into using infer instead of the system's compilers: 
+```bash
+cd build
+infer compile -- cmake ..
+infer run -- make -j 4
+```
 
 ## Ceedling
 ### Usage
